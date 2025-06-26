@@ -16,7 +16,7 @@ export default function Hero() {
 
       <div className="relative z-10 text-center max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
         <h1 className="text-5xl md:text-7xl font-bold mb-6 leading-tight">
-          Illuminate Tomorrow with <span className="text-transparent bg-clip-text bg-gradient-to-r from-neon-pink to-neon-purple animate-glow">Moonlights</span>
+          Illuminate Tomorrow with <span className="bg-clip-text bg-gradient-to-r from-neon-pink to-neon-purple animate-glow">Moonlights</span>
         </h1>
         
         <p className="text-xl md:text-2xl text-gray-300 mb-8 max-w-2xl mx-auto">

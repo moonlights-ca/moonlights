@@ -4,7 +4,7 @@ export default function About() {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-16">
           <h2 className="text-4xl md:text-5xl font-bold mb-6">
-            About <span className="text-transparent bg-clip-text bg-gradient-to-r from-neon-pink to-neon-purple">Moonlights</span>
+            About <span className="bg-clip-text bg-gradient-to-r from-neon-pink to-neon-purple">Moonlights</span>
           </h2>
           <p className="text-lg text-gray-400 max-w-3xl mx-auto">
             We're a passionate team of innovators on a mission to revolutionize lighting technology and create smarter, safer environments for tomorrow.
@@ -106,7 +106,7 @@ export default function About() {
         {/* Team Section */}
         <div className="mt-20 text-center">
           <h3 className="text-3xl font-bold text-white mb-6">
-            Built by <span className="text-transparent bg-clip-text bg-gradient-to-r from-neon-pink to-neon-purple">Visionaries</span>
+            Built by <span className="bg-clip-text bg-gradient-to-r from-neon-pink to-neon-purple">Visionaries</span>
           </h3>
           <p className="text-gray-400 max-w-2xl mx-auto mb-8">
             Our diverse team of engineers, designers, and innovators is united by a shared passion for creating 

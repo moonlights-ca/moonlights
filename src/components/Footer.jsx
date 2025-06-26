@@ -3,16 +3,10 @@ import Logo from './Logo'
 export default function Footer() {
   const footerLinks = {
     'Company': [
+      { label: 'Home', href: '#' },
       { label: 'About', href: '#' },
-      { label: 'Careers', href: '#' },
-      { label: 'Press', href: '#' },
-      { label: 'Blog', href: '#' }
-    ],
-    'Support': [
-      { label: 'Help Center', href: '#' },
       { label: 'Contact', href: '#contact' },
-      { label: 'Privacy', href: '#' },
-      { label: 'Terms', href: '#' }
+      { label: 'Products', href: '#products' }
     ]
   }
 
@@ -22,9 +16,9 @@ export default function Footer() {
       <div className="w-full h-1 bg-gradient-to-r from-transparent via-neon-purple to-transparent"></div>
       
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
-        <div className="grid md:grid-cols-4 gap-8">
+        <div className="flex flex-col md:flex-row justify-between items-start gap-8">
           {/* Logo and Description */}
-          <div className="md:col-span-2">
+          <div className="flex-1 max-w-2xl">
             <Logo className="h-10 mb-6" />
             <p className="text-gray-400 mb-6 max-w-md">
               Next-generation LED technology startup revolutionizing professional lighting solutions. 
@@ -46,25 +40,11 @@ export default function Footer() {
             </div>
           </div>
 
-          {/* Company Links */}
-          <div>
+          {/* Company Links - Aligned to the right */}
+          <div className="text-right">
             <h3 className="text-white font-semibold mb-4">Company</h3>
             <ul className="space-y-2">
               {footerLinks['Company'].map((link, index) => (
-                <li key={index}>
-                  <a href={link.href} className="text-gray-400 hover:text-neon-pink transition-colors">
-                    {link.label}
-                  </a>
-                </li>
-              ))}
-            </ul>
-          </div>
-
-          {/* Support Links */}
-          <div>
-            <h3 className="text-white font-semibold mb-4">Support</h3>
-            <ul className="space-y-2">
-              {footerLinks['Support'].map((link, index) => (
                 <li key={index}>
                   <a href={link.href} className="text-gray-400 hover:text-neon-pink transition-colors">
                     {link.label}

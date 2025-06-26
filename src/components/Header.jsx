@@ -1,14 +1,17 @@
 import { useState } from 'react'
+import { Link, useLocation } from 'react-router-dom'
 import Logo from './Logo'
 
 export default function Header() {
   const [isMenuOpen, setIsMenuOpen] = useState(false)
+  const location = useLocation()
+  const isHomePage = location.pathname === '/'
 
   const navItems = [
-    { label: 'Home', href: '#home' },
-    { label: 'Products', href: '#products' },
-    { label: 'About Us', href: '#about' },
-    { label: 'Contact', href: '#contact' }
+    { label: 'Home', href: isHomePage ? '#home' : '/#home' },
+    { label: 'Products', href: isHomePage ? '#products' : '/#products' },
+    { label: 'About Us', href: isHomePage ? '#about' : '/#about' },
+    { label: 'Contact', href: isHomePage ? '#contact' : '/#contact' }
   ]
 
   return (
@@ -16,7 +19,9 @@ export default function Header() {
       <nav className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between items-center h-16">
           {/* Logo */}
-          <Logo />
+          <Link to="/">
+            <Logo />
+          </Link>
 
           {/* Desktop Navigation */}
           <div className="hidden md:flex items-center space-x-8">
@@ -29,7 +34,7 @@ export default function Header() {
                 {item.label}
               </a>
             ))}
-            <a href="#contact" className="btn-primary">
+            <a href={isHomePage ? "#contact" : "/#contact"} className="btn-primary">
               Get Started
             </a>
           </div>
@@ -65,7 +70,7 @@ export default function Header() {
                   {item.label}
                 </a>
               ))}
-              <a href="#contact" className="w-full mt-4 btn-primary">
+              <a href={isHomePage ? "#contact" : "/#contact"} className="w-full mt-4 btn-primary">
                 Get Started
               </a>
             </div>

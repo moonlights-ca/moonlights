@@ -684,10 +684,6 @@ svg {
   --tw-gradient-to: var(--neon-purple);
 }
 
-.text-transparent {
-  color: transparent;
-}
-
 .bg-clip-text {
   -webkit-background-clip: text;
   background-clip: text;
@@ -715,6 +711,10 @@ svg {
 
 .grid-cols-3 {
   grid-template-columns: repeat(3, minmax(0, 1fr));
+}
+
+.grid-cols-6 {
+  grid-template-columns: repeat(6, 1fr);
 }
 
 .gap-4 { gap: 1rem; }
@@ -830,6 +830,28 @@ svg {
 
 .animate-glow {
   animation: glow 2s ease-in-out infinite alternate;
+}
+
+.animate-spin {
+  animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes spin-slow {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
 }
 
 /* Responsive classes */
@@ -1162,7 +1184,20 @@ svg {
   animation: spin 1s linear infinite;
 }
 
+.animate-spin-slow {
+  animation: spin-slow 3s linear infinite;
+}
+
 @keyframes spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes spin-slow {
   from {
     transform: rotate(0deg);
   }
@@ -1660,10 +1695,6 @@ svg {
   --tw-gradient-to: var(--neon-purple);
 }
 
-.text-transparent {
-  color: transparent;
-}
-
 .bg-clip-text {
   -webkit-background-clip: text;
   background-clip: text;
@@ -1691,6 +1722,10 @@ svg {
 
 .grid-cols-3 {
   grid-template-columns: repeat(3, minmax(0, 1fr));
+}
+
+.grid-cols-6 {
+  grid-template-columns: repeat(6, 1fr);
 }
 
 .gap-4 { gap: 1rem; }
@@ -1806,6 +1841,32 @@ svg {
 
 .animate-glow {
   animation: glow 2s ease-in-out infinite alternate;
+}
+
+.animate-spin {
+  animation: spin 1s linear infinite;
+}
+
+.animate-spin-slow {
+  animation: spin-slow 3s linear infinite;
+}
+
+@keyframes spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes spin-slow {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
 }
 
 /* Responsive classes */
@@ -2138,11 +2199,86 @@ svg {
   animation: spin 1s linear infinite;
 }
 
+.animate-spin-slow {
+  animation: spin-slow 3s linear infinite;
+}
+
 @keyframes spin {
   from {
     transform: rotate(0deg);
   }
   to {
     transform: rotate(360deg);
+  }
+}
+
+@keyframes spin-slow {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+/* Additional animations for Commercial Lights page */
+@keyframes spin-slow {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.animate-spin-slow {
+  animation: spin-slow 3s linear infinite;
+}
+
+/* Table hover effects */
+.table-row-hover:hover {
+  background: linear-gradient(90deg, rgba(0, 128, 255, 0.1), rgba(0, 255, 255, 0.1));
+  border-color: rgba(0, 128, 255, 0.5);
+}
+
+/* Enhanced grid layouts */
+.grid-cols-6 {
+  grid-template-columns: repeat(6, 1fr);
+}
+
+/* IP Rating color variants */
+.ip-rating-ip68 {
+  background: rgba(0, 255, 128, 0.2);
+  color: var(--neon-green);
+  border: 1px solid rgba(0, 255, 128, 0.3);
+}
+
+.ip-rating-ip67 {
+  background: rgba(0, 128, 255, 0.2);
+  color: var(--neon-blue);
+  border: 1px solid rgba(0, 128, 255, 0.3);
+}
+
+.ip-rating-ip65 {
+  background: rgba(0, 255, 255, 0.2);
+  color: var(--neon-cyan);
+  border: 1px solid rgba(0, 255, 255, 0.3);
+}
+
+.ip-rating-ip44 {
+  background: rgba(128, 0, 255, 0.2);
+  color: var(--neon-purple);
+  border: 1px solid rgba(128, 0, 255, 0.3);
+}
+
+/* Responsive table improvements */
+@media (max-width: 768px) {
+  .grid-cols-6 {
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2px;
+  }
+  
+  .grid-cols-6 > div:nth-child(n+4) {
+    display: none;
   }
 }
