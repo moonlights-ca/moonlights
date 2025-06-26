@@ -2,30 +2,21 @@ export default function Products() {
   const products = [
     {
       id: 1,
-      name: "Smart Residential LEDs",
-      description: "Next-gen LED safety systems for modern homes and gated communities. Features app control, motion detection, and adaptive brightness.",
+      name: "Residential Lights",
+      description: "High-quality LED safety systems for modern homes and gated communities. Features weather resistance, motion detection, and energy efficiency.",
       image: "/api/placeholder/300/200",
       category: "Residential",
-      features: ["App Control", "Motion Sensors", "Weather Resistant", "Energy Efficient"],
+      features: ["Motion Sensors", "Weather Resistant", "Energy Efficient", "Easy Installation"],
       color: "from-neon-pink to-neon-purple"
     },
     {
       id: 2,
-      name: "Commercial ProLights", 
-      description: "Professional-grade LED solutions for commercial spaces. Scalable, intelligent, and designed for high-traffic environments.",
+      name: "Commercial Lights", 
+      description: "Professional-grade LED solutions for commercial spaces. Scalable, durable, and designed for high-traffic environments.",
       image: "/api/placeholder/300/200",
       category: "Commercial",
-      features: ["Scalable System", "Traffic Analysis", "Remote Management", "24/7 Monitoring"],
+      features: ["Scalable System", "Durable Design", "Professional Grade", "24/7 Reliability"],
       color: "from-neon-blue to-neon-cyan"
-    },
-    {
-      id: 3,
-      name: "AI-Powered Decorative LEDs",
-      description: "Revolutionary decorative systems with AI pattern generation and environmental responsiveness for stunning visual experiences.",
-      image: "/api/placeholder/300/200", 
-      category: "Smart",
-      features: ["AI Patterns", "Music Sync", "Voice Control", "Environmental Sensors"],
-      color: "from-neon-green to-neon-blue"
     }
   ]
 
@@ -38,13 +29,13 @@ export default function Products() {
             Revolutionary <span className="text-transparent bg-clip-text bg-gradient-to-r from-neon-pink to-neon-purple">LED Solutions</span>
           </h2>
           <p className="text-lg text-gray-400 max-w-3xl mx-auto">
-            Next-generation lighting systems powered by AI, IoT, and cutting-edge technology. 
-            Built for the future, designed for today's smart environments.
+            Professional LED lighting systems built for reliability and efficiency. 
+            Designed for modern environments with focus on quality and performance.
           </p>
         </div>
 
         {/* Products Grid */}
-        <div className="grid md:grid-cols-3 gap-8 mb-16">
+        <div className="grid md:grid-cols-2 gap-8 mb-16 max-w-4xl mx-auto">
           {products.map((product) => (
             <div key={product.id} className="group cursor-pointer">
               <div className="bg-dark-700 rounded-xl overflow-hidden border border-gray-700 hover:border-neon-pink/50 transition-all duration-500 hover:shadow-xl hover:shadow-neon-pink/20 hover:scale-105">
@@ -67,16 +58,6 @@ export default function Products() {
                         <div className="w-3 h-20 bg-gradient-to-t from-neon-pink to-neon-purple rounded animate-pulse delay-150"></div>
                         <div className="w-3 h-14 bg-gradient-to-t from-neon-green to-neon-blue rounded animate-pulse delay-300"></div>
                         <div className="w-3 h-18 bg-gradient-to-t from-neon-purple to-neon-pink rounded animate-pulse delay-450"></div>
-                      </div>
-                    )}
-                    {product.category === "Smart" && (
-                      <div className="relative">
-                        <div className="w-16 h-16 border-4 border-neon-green rounded-full flex items-center justify-center animate-spin-slow">
-                          <div className="w-8 h-8 bg-gradient-to-r from-neon-green to-neon-blue rounded-full flex items-center justify-center">
-                            <div className="text-white text-xs font-bold">AI</div>
-                          </div>
-                        </div>
-                        <div className="absolute -inset-4 border border-neon-green/30 rounded-full animate-ping"></div>
                       </div>
                     )}
                   </div>
@@ -123,18 +104,18 @@ export default function Products() {
                 The Future is Bright
               </h3>
               <p className="text-gray-400 mb-6 text-lg">
-                Moonlights is pioneering the next generation of intelligent LED systems. Our startup is built on 
-                innovation, sustainability, and the vision of creating smarter, safer environments through technology.
+                Moonlights is pioneering the next generation of LED lighting systems. Our startup is built on 
+                innovation, sustainability, and the vision of creating safer environments through quality lighting technology.
               </p>
               
               <div className="space-y-4">
                 <div className="flex items-start space-x-3">
                   <div className="w-3 h-3 bg-gradient-to-r from-neon-pink to-neon-purple rounded-full mt-2 animate-pulse"></div>
-                  <p className="text-gray-300">AI-driven adaptive lighting that learns from usage patterns</p>
+                  <p className="text-gray-300">Advanced LED technology with superior brightness and longevity</p>
                 </div>
                 <div className="flex items-start space-x-3">
                   <div className="w-3 h-3 bg-gradient-to-r from-neon-blue to-neon-cyan rounded-full mt-2 animate-pulse delay-150"></div>
-                  <p className="text-gray-300">IoT connectivity for seamless smart home integration</p>
+                  <p className="text-gray-300">Weather-resistant design for reliable outdoor performance</p>
                 </div>
                 <div className="flex items-start space-x-3">
                   <div className="w-3 h-3 bg-gradient-to-r from-neon-green to-neon-blue rounded-full mt-2 animate-pulse delay-300"></div>
@@ -142,7 +123,7 @@ export default function Products() {
                 </div>
                 <div className="flex items-start space-x-3">
                   <div className="w-3 h-3 bg-gradient-to-r from-neon-purple to-neon-pink rounded-full mt-2 animate-pulse delay-450"></div>
-                  <p className="text-gray-300">Real-time monitoring and predictive maintenance alerts</p>
+                  <p className="text-gray-300">Professional installation and comprehensive warranty coverage</p>
                 </div>
               </div>
 
@@ -160,7 +141,7 @@ export default function Products() {
                 <div className="relative w-full h-full">
                   {/* Central hub */}
                   <div className="absolute inset-1/3 bg-gradient-to-r from-neon-pink to-neon-purple rounded-full flex items-center justify-center animate-pulse">
-                    <div className="text-white font-bold text-lg">AI</div>
+                    <div className="text-white font-bold text-lg">💡</div>
                   </div>
                   
                   {/* Orbiting elements */}

@@ -17,12 +17,12 @@ export default function About() {
             <h3 className="text-3xl font-bold mb-6 text-white">Our Vision</h3>
             <p className="text-gray-400 mb-6 leading-relaxed">
               Founded with a vision to transform how we think about lighting, Moonlights is pioneering the next generation 
-              of intelligent LED systems. We believe that lighting should be more than just illumination—it should be smart, 
-              adaptive, and seamlessly integrated into our digital lives.
+              of LED systems. We believe that lighting should be more than just illumination—it should be reliable, 
+              efficient, and seamlessly integrated into our environments.
             </p>
             <p className="text-gray-400 mb-6 leading-relaxed">
               As a startup, we're not bound by traditional approaches. We're free to innovate, experiment, and push the 
-              boundaries of what's possible with LED technology. Our solutions combine cutting-edge AI, IoT connectivity, 
+              boundaries of what's possible with LED technology. Our solutions combine cutting-edge engineering, 
               and sustainable design principles.
             </p>
             
@@ -32,8 +32,8 @@ export default function About() {
                 <div className="text-gray-400 text-sm">Founded</div>
               </div>
               <div className="text-center p-4 bg-dark-700 rounded-lg border border-neon-blue/20">
-                <div className="text-2xl font-bold text-neon-blue mb-2">AI-First</div>
-                <div className="text-gray-400 text-sm">Approach</div>
+                <div className="text-2xl font-bold text-neon-blue mb-2">Quality</div>
+                <div className="text-gray-400 text-sm">Focused</div>
               </div>
               <div className="text-center p-4 bg-dark-700 rounded-lg border border-neon-green/20">
                 <div className="text-2xl font-bold text-neon-green mb-2">90%</div>

@@ -27,7 +27,7 @@ export default function Footer() {
           <div className="md:col-span-2">
             <Logo className="h-10 mb-6" />
             <p className="text-gray-400 mb-6 max-w-md">
-              Next-generation LED technology startup revolutionizing smart lighting solutions. 
+              Next-generation LED technology startup revolutionizing professional lighting solutions. 
               Join us in illuminating the future with innovation, sustainability, and cutting-edge design.
             </p>
             <div className="flex space-x-4">

@@ -1,6 +1,6 @@
 # Moonlights - LED Safety Light Systems
 
-A modern, responsive website for Moonlights, an innovative startup developing next-generation LED Safety Light Systems with AI-powered intelligence and IoT connectivity.
+A modern, responsive website for Moonlights, an innovative startup developing next-generation LED Safety Light Systems with IoT connectivity.
 
 ## Features
 
@@ -15,7 +15,7 @@ A modern, responsive website for Moonlights, an innovative startup developing ne
 ## Sections
 
 - **Hero**: Eye-catching landing section with animated LED effects and innovation indicators
-- **Products**: Three main product categories (Smart Residential, Commercial ProLights, AI-Powered Decorative)
+- **Products**: Two main product categories (Residential Lights, Commercial Lights)
 - **About Us**: Startup story, vision, values, and team information
 - **Contact**: Contact form with fiber optic visual effects
 - **Footer**: Company information and links

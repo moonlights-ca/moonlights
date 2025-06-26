@@ -20,7 +20,7 @@ export default function Hero() {
         </h1>
         
         <p className="text-xl md:text-2xl text-gray-300 mb-8 max-w-2xl mx-auto">
-          Revolutionary LED Safety Light Systems for the next generation of smart environments
+          Professional LED Safety Light Systems for modern environments and enhanced security
         </p>
 
         <div className="flex flex-col sm:flex-row gap-4 justify-center items-center mb-12">
@@ -40,7 +40,7 @@ export default function Hero() {
               <div className="w-8 h-8 bg-gradient-to-r from-neon-blue to-neon-cyan rounded-full flex items-center justify-center">
                 <div className="w-4 h-4 bg-white rounded-full animate-pulse"></div>
               </div>
-              <span className="text-gray-400">AI-Powered</span>
+              <span className="text-gray-400">Energy Efficient</span>
             </div>
             <div className="flex items-center gap-2">
               <div className="w-8 h-8 bg-gradient-to-r from-neon-pink to-neon-purple rounded-full flex items-center justify-center">
@@ -58,7 +58,7 @@ export default function Hero() {
               <div className="w-8 h-8 bg-gradient-to-r from-neon-purple to-neon-pink rounded-full flex items-center justify-center">
                 <div className="w-4 h-4 bg-white rounded-full animate-pulse delay-900"></div>
               </div>
-              <span className="text-gray-400">Smart Control</span>
+              <span className="text-gray-400">Advanced Control</span>
             </div>
           </div>
         </div>
