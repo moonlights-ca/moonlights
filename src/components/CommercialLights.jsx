@@ -317,7 +317,7 @@ export default function CommercialLights() {
                     Get Quote
                   </Link>
                   <Link 
-                    to="/" 
+                    to="/#products" 
                     className="btn-secondary text-lg px-8 py-4"
                   >
                     View All Products
