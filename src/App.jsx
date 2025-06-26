@@ -1,11 +1,11 @@
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom'
-import Header from './components/Header'
-import Hero from './components/Hero'
-import Products from './components/Products'
-import About from './components/About'
-import Contact from './components/Contact'
-import Footer from './components/Footer'
-import CommercialLights from './components/CommercialLights'
+import Header from './components/Header.jsx'
+import Hero from './components/Hero.jsx'
+import Products from './components/Products.jsx'
+import About from './components/About.jsx'
+import Contact from './components/Contact.jsx'
+import Footer from './components/Footer.jsx'
+import CommercialLights from './components/CommercialLights.jsx'
 
 // Home page component
 function HomePage() {
@@ -25,7 +25,7 @@ function HomePage() {
 
 function App() {
   return (
-    <Router basename="/">
+    <Router basename="/moonlights/">
       <Routes>
         <Route path="/" element={<HomePage />} />
         <Route path="/commercial-lights" element={<CommercialLights />} />
