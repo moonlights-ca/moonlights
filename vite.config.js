@@ -6,5 +6,5 @@ export default defineConfig({
   plugins: [react({
     include: "**/*.{jsx,tsx,js,ts}",
   })],
-  base: '/',
+  base: '/moonlights/',
 })
