@@ -168,7 +168,7 @@ export default function CommercialLights() {
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="text-center mb-16">
               <h2 className="text-4xl md:text-5xl font-bold mb-6">
-                Product <span className="bg-clip-text ">Showcase</span>
+                Product <span className="bg-clip-text text-transparent bg-gradient-to-r from-neon-pink to-neon-purple">Showcase</span>
               </h2>
               <p className="text-lg text-gray-400 max-w-3xl mx-auto">
                 Explore our comprehensive range of commercial LED strip lights designed for professional applications

@@ -9,9 +9,14 @@ export default function Header() {
 
   const navItems = [
     { label: 'Home', href: isHomePage ? '#home' : '/#home' },
-    { label: 'Products', href: isHomePage ? '#products' : '/#products' },
     { label: 'About Us', href: isHomePage ? '#about' : '/#about' },
-    { label: 'Contact', href: isHomePage ? '#contact' : '/#contact' }
+    { label: 'Products', href: isHomePage ? '#products' : '/#products', hasDropdown: true },
+    { label: 'Contact Us', href: isHomePage ? '#contact' : '/#contact' }
+  ]
+
+  const productDropdownItems = [
+    { label: 'Residential Lights', href: '/residential-lights' },
+    { label: 'Commercial Lights', href: '/commercial-lights' }
   ]
 
   return (
@@ -26,17 +31,33 @@ export default function Header() {
           {/* Desktop Navigation */}
           <div className="hidden md:flex items-center space-x-8">
             {navItems.map((item) => (
-              <a
-                key={item.label}
-                href={item.href}
-                className="text-gray-300 hover:text-neon-pink transition-colors duration-300 font-medium"
-              >
-                {item.label}
-              </a>
+              <div key={item.label} className="relative group">
+                <a
+                  href={item.href}
+                  className="text-gray-300 hover:text-neon-pink transition-colors duration-300 font-medium flex items-center"
+                >
+                  {item.label}
+                  {item.hasDropdown && (
+                    <svg className="ml-1 h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
+                    </svg>
+                  )}
+                </a>
+                {item.hasDropdown && (
+                  <div className="absolute top-full left-0 mt-2 w-48 bg-dark-800 border border-gray-700 rounded-lg shadow-lg opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300">
+                    {productDropdownItems.map((dropdownItem) => (
+                      <Link
+                        key={dropdownItem.label}
+                        to={dropdownItem.href}
+                        className="block px-4 py-2 text-gray-300 hover:text-neon-pink hover:bg-dark-700 transition-colors duration-300"
+                      >
+                        {dropdownItem.label}
+                      </Link>
+                    ))}
+                  </div>
+                )}
+              </div>
             ))}
-            <a href={isHomePage ? "#contact" : "/#contact"} className="btn-primary">
-              Get Started
-            </a>
           </div>
 
           {/* Mobile menu button */}
@@ -70,9 +91,6 @@ export default function Header() {
                   {item.label}
                 </a>
               ))}
-              <a href={isHomePage ? "#contact" : "/#contact"} className="w-full mt-4 btn-primary">
-                Get Started
-              </a>
             </div>
           </div>
         )}

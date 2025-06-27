@@ -35,6 +35,130 @@ function CommercialSlideshow() {
   );
 }
 
+// ProductSpecifications component
+function ProductSpecifications() {
+  const specCategories = [
+    {
+      title: "Chip Types",
+      icon: "💎",
+      items: ["2219", "2835", "3528", "3535", "5050", "ARGB", "COB"],
+      color: "from-neon-pink to-neon-purple"
+    },
+    {
+      title: "Color Temperature",
+      icon: "🌡️",
+      items: ["2700K", "3000K", "4000K", "6500K", "RGB", "RGBCCT", "RGBW"],
+      color: "from-neon-blue to-neon-cyan"
+    },
+    {
+      title: "LED Density",
+      icon: "✨",
+      items: ["30LEDs", "60LEDs", "120LEDs", "140LEDs", "180LEDs", "200LEDs"],
+      color: "from-neon-green to-neon-blue"
+    },
+    {
+      title: "Protection Rating",
+      icon: "🛡️",
+      items: ["IP20", "IP65"],
+      color: "from-neon-purple to-neon-pink"
+    },
+    {
+      title: "PCB Width",
+      icon: "📐",
+      items: ["4mm", "6mm", "8mm", "10mm", "12mm", "14mm", "16mm"],
+      color: "from-neon-cyan to-neon-green"
+    },
+    {
+      title: "Brightness",
+      icon: "💡",
+      items: ["500 LM/m", "750 LM/m", "1000 LM/m", "1500 LM/m", "2000 LM/m", "3000 LM/m"],
+      color: "from-neon-pink to-neon-blue"
+    }
+  ];
+
+  return (
+    <div className="py-20 relative overflow-hidden">
+      {/* Background Effects */}
+      <div className="absolute inset-0">
+        <div className="absolute top-10 left-10 w-64 h-64 bg-neon-pink/10 rounded-full blur-3xl animate-pulse"></div>
+        <div className="absolute bottom-10 right-10 w-64 h-64 bg-neon-blue/10 rounded-full blur-3xl animate-pulse delay-1000"></div>
+      </div>
+
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+        {/* Section Header */}
+        <div className="text-center mb-16">
+          <h2 className="text-4xl md:text-5xl font-bold mb-6">
+            Product <span className="bg-clip-text bg-gradient-to-r from-neon-pink to-neon-purple">Specifications</span>
+          </h2>
+          <p className="text-lg text-gray-400 max-w-3xl mx-auto">
+            Comprehensive range of LED strip specifications designed to meet every lighting requirement
+          </p>
+        </div>
+
+        {/* Specifications Grid */}
+        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+          {specCategories.map((category, index) => (
+            <div 
+              key={category.title}
+              className="group relative spec-category"
+            >
+              {/* Card */}
+              <div className="bg-dark-700 rounded-xl border border-gray-700 hover:border-neon-pink/50 transition-all duration-500 overflow-hidden h-full">
+                {/* Header */}
+                <div className={`bg-gradient-to-r ${category.color} p-0.5`}>
+                  <div className="bg-dark-700 p-6 rounded-t-xl">
+                    <div className="flex items-center space-x-3 mb-4">
+                      <span className="text-2xl">{category.icon}</span>
+                      <h3 className="text-xl font-bold text-white">{category.title}</h3>
+                    </div>
+                  </div>
+                </div>
+
+                {/* Content */}
+                <div className="p-6">
+                  <div className="grid grid-cols-3 gap-2">
+                    {category.items.map((item, itemIndex) => (
+                      <div 
+                        key={item}
+                        className="spec-item spec-item-hover text-center py-2 px-3 rounded-lg text-sm font-medium transition-all duration-300 bg-dark-800 text-gray-300 border border-gray-600 hover:bg-gradient-to-r hover:from-neon-pink hover:to-neon-purple hover:text-white hover:border-transparent hover:scale-105 hover:shadow-lg"
+                        style={{
+                          animationDelay: `${itemIndex * 100}ms`
+                        }}
+                      >
+                        {item}
+                      </div>
+                    ))}
+                  </div>
+                </div>
+
+                {/* Hover Effect */}
+                <div className={`absolute inset-0 bg-gradient-to-r ${category.color} opacity-0 group-hover:opacity-10 transition-opacity duration-500 pointer-events-none`}></div>
+              </div>
+            </div>
+          ))}
+        </div>
+
+        {/* Call to Action */}
+        <div className="mt-16 text-center">
+          <div className="bg-gradient-to-r from-dark-800 to-dark-700 rounded-2xl p-8 border border-neon-blue/20">
+            <h3 className="text-2xl font-bold mb-4 text-white">
+              Need Custom Specifications?
+            </h3>
+            <p className="text-gray-400 mb-6 max-w-2xl mx-auto">
+              Our engineering team can create custom LED solutions tailored to your specific requirements
+            </p>
+            <button className="bg-gradient-to-r from-neon-pink to-neon-purple text-white px-8 py-4 rounded-lg font-medium hover:shadow-lg hover:shadow-neon-pink/30 transition-all duration-300 text-lg">
+              <a href="#contact">
+                  Request Custom Quote
+              </a>
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+  );
+}
+
 export default function Products() {
   const products = [
     {
@@ -72,13 +196,22 @@ export default function Products() {
         </div>
 
         {/* Products Grid */}
-        <div className="grid md:grid-cols-2 gap-8 mb-16 max-w-4xl mx-auto">
+        <div className="grid md:grid-cols-2 gap-8 mb-20 max-w-4xl mx-auto">
           {products.map((product) => {
             const ProductCard = ({ children }) => {
               if (product.category === "Commercial") {
                 return (
                   <Link 
                     to="/commercial-lights" 
+                    className="group cursor-pointer block"
+                  >
+                    {children}
+                  </Link>
+                );
+              } else if (product.category === "Residential") {
+                return (
+                  <Link 
+                    to="/residential-lights" 
                     className="group cursor-pointer block"
                   >
                     {children}
@@ -143,6 +276,13 @@ export default function Products() {
                         >
                           Learn More →
                         </span>
+                      ) : product.category === "Residential" ? (
+                        <span 
+                          className="text-neon-pink hover:text-neon-purple transition-colors text-sm font-medium"
+                          onClick={(e) => e.preventDefault()} // Prevent double navigation since whole card is clickable
+                        >
+                          Learn More →
+                        </span>
                       ) : (
                         <button className="text-neon-pink hover:text-neon-purple transition-colors text-sm font-medium">
                           Learn More →
@@ -156,69 +296,8 @@ export default function Products() {
           })}
         </div>
 
-        {/* Innovation Showcase */}
-        <div className="bg-gradient-to-r from-dark-800 to-dark-700 rounded-2xl p-8 border border-neon-pink/20">
-          <div className="grid md:grid-cols-2 gap-12 items-center">
-            {/* Innovation Content */}
-            <div>
-              <h3 className="text-3xl font-bold mb-6 bg-clip-text bg-gradient-to-r from-neon-pink to-neon-purple">
-                The Future is Bright
-              </h3>
-              <p className="text-gray-400 mb-6 text-lg">
-                Moonlights is pioneering the next generation of LED lighting systems. Our startup is built on 
-                innovation, sustainability, and the vision of creating safer environments through quality lighting technology.
-              </p>
-              
-              <div className="space-y-4">
-                <div className="flex items-start space-x-3">
-                  <div className="w-3 h-3 bg-gradient-to-r from-neon-pink to-neon-purple rounded-full mt-2 animate-pulse"></div>
-                  <p className="text-gray-300">Advanced LED technology with superior brightness and longevity</p>
-                </div>
-                <div className="flex items-start space-x-3">
-                  <div className="w-3 h-3 bg-gradient-to-r from-neon-blue to-neon-cyan rounded-full mt-2 animate-pulse delay-150"></div>
-                  <p className="text-gray-300">Weather-resistant design for reliable outdoor performance</p>
-                </div>
-                <div className="flex items-start space-x-3">
-                  <div className="w-3 h-3 bg-gradient-to-r from-neon-green to-neon-blue rounded-full mt-2 animate-pulse delay-300"></div>
-                  <p className="text-gray-300">Sustainable design with 90% energy efficiency improvement</p>
-                </div>
-                <div className="flex items-start space-x-3">
-                  <div className="w-3 h-3 bg-gradient-to-r from-neon-purple to-neon-pink rounded-full mt-2 animate-pulse delay-450"></div>
-                  <p className="text-gray-300">Professional installation and comprehensive warranty coverage</p>
-                </div>
-              </div>
-
-              <div className="mt-8">
-                <button className="bg-gradient-to-r from-neon-pink to-neon-purple text-white px-6 py-3 rounded-lg font-medium hover:shadow-lg hover:shadow-neon-pink/30 transition-all duration-300">
-                  Join the Revolution
-                </button>
-              </div>
-            </div>
-            
-            {/* Innovation Visual */}
-            <div className="relative">
-              <div className="aspect-square bg-gradient-to-br from-dark-900 to-dark-800 rounded-xl border border-neon-blue/30 overflow-hidden p-8">
-                {/* Animated innovation visualization */}
-                <div className="relative w-full h-full">
-                  {/* Central hub */}
-                  <div className="absolute inset-1/3 bg-gradient-to-r from-neon-pink to-neon-purple rounded-full flex items-center justify-center animate-pulse">
-                    <div className="text-white font-bold text-lg">💡</div>
-                  </div>
-                  
-                  {/* Orbiting elements */}
-                  <div className="absolute top-4 left-1/2 w-4 h-4 bg-neon-blue rounded-full animate-bounce"></div>
-                  <div className="absolute top-1/2 right-4 w-4 h-4 bg-neon-green rounded-full animate-bounce delay-300"></div>
-                  <div className="absolute bottom-4 left-1/2 w-4 h-4 bg-neon-purple rounded-full animate-bounce delay-600"></div>
-                  <div className="absolute top-1/2 left-4 w-4 h-4 bg-neon-cyan rounded-full animate-bounce delay-900"></div>
-                  
-                  {/* Connection lines */}
-                  <div className="absolute inset-0 border-2 border-neon-pink/20 rounded-full animate-spin-slow"></div>
-                  <div className="absolute inset-4 border border-neon-blue/20 rounded-full animate-spin-slow" style={{animationDirection: 'reverse'}}></div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
+        {/* Product Specifications Showcase */}
+        <ProductSpecifications />
       </div>
     </section>
   )
