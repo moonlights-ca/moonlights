@@ -3,6 +3,9 @@ import { useState, useEffect } from 'react'
 import cmSS1 from '../assets/CM_SS-1.png'
 import cmSS2 from '../assets/CM_SS-2.png'
 import cmSS3 from '../assets/CM_SS-3.png'
+import rlSS1 from '../assets/RL_SS-1.png'
+import rlSS2 from '../assets/RL_SS-2.png'
+import rlSS3 from '../assets/RL_SS-3.png'
 
 // Slideshow component for Commercial product images
 function CommercialSlideshow() {
@@ -26,6 +29,37 @@ function CommercialSlideshow() {
           key={index}
           src={image}
           alt={`Commercial Light ${index + 1}`}
+          className={`w-full h-full object-cover absolute top-0 left-0 transition-opacity duration-500 ${
+            index === currentImageIndex ? 'opacity-100' : 'opacity-0'
+          }`}
+        />
+      ))}
+    </div>
+  );
+}
+
+// Slideshow component for Residential product images
+function ResidentialSlideshow() {
+  const [currentImageIndex, setCurrentImageIndex] = useState(0);
+  const images = [rlSS1, rlSS2, rlSS3];
+
+  useEffect(() => {
+    const interval = setInterval(() => {
+      setCurrentImageIndex((prevIndex) => 
+        prevIndex === images.length - 1 ? 0 : prevIndex + 1
+      );
+    }, 2000); // Change image every 2 seconds
+
+    return () => clearInterval(interval);
+  }, [images.length]);
+
+  return (
+    <div className="w-full h-full relative">
+      {images.map((image, index) => (
+        <img
+          key={index}
+          src={image}
+          alt={`Residential Light ${index + 1}`}
           className={`w-full h-full object-cover absolute top-0 left-0 transition-opacity duration-500 ${
             index === currentImageIndex ? 'opacity-100' : 'opacity-0'
           }`}
@@ -232,14 +266,7 @@ export default function Products() {
                   <div className={`aspect-video bg-gradient-to-br ${product.color} p-0.5`}>
                     <div className="w-full h-full bg-dark-800 rounded-t-lg flex items-center justify-center relative overflow-hidden">
                       {product.category === "Residential" && (
-                        <div className="relative">
-                          <div className="w-20 h-20 bg-gradient-to-r from-neon-pink to-neon-purple rounded-full flex items-center justify-center animate-pulse">
-                            <div className="w-12 h-12 bg-white rounded-full flex items-center justify-center">
-                              <div className="w-6 h-6 bg-gradient-to-r from-neon-pink to-neon-purple rounded-full"></div>
-                            </div>
-                          </div>
-                          <div className="absolute -top-2 -right-2 w-6 h-6 bg-neon-green rounded-full animate-ping"></div>
-                        </div>
+                        <ResidentialSlideshow />
                       )}
                       {product.category === "Commercial" && (
                         <CommercialSlideshow />
