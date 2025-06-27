@@ -2,6 +2,14 @@ import { Link } from 'react-router-dom'
 import { useEffect } from 'react'
 import Header from './Header'
 import Footer from './Footer'
+import cmML1 from '../assets/CM_ML-1.png'
+import cmML2 from '../assets/CM_ML-2.png'
+import cmML3 from '../assets/CM_ML-3.png'
+import cmML4 from '../assets/CM_ML-4.png'
+import cmML5 from '../assets/CM_ML-5.png'
+import cmML6 from '../assets/CM_ML-6.png'
+import cmML7 from '../assets/CM_ML-7.png'
+import cmML8 from '../assets/CM_ML-8.png'
 
 export default function CommercialLights() {
   // Scroll to top when component mounts
@@ -13,7 +21,7 @@ export default function CommercialLights() {
     {
       id: 1,
       name: "5050RGB+2835W-10/60+240D-24V-15mm",
-      image: "/src/assets/CM_ML-1.png",
+      image: cmML1,
       category: "RGB+White Strip",
       itemCode: "ML-5050RGB-15",
       length: "5M",
@@ -24,7 +32,7 @@ export default function CommercialLights() {
     {
       id: 2,
       name: "5050RGB+2835W-8/56+120D-24V-15mm",
-      image: "/src/assets/CM_ML-2.png",
+      image: cmML2,
       category: "RGB+White Strip",
       itemCode: "ML-5050RGB-8",
       length: "5M",
@@ -35,7 +43,7 @@ export default function CommercialLights() {
     {
       id: 3,
       name: "5050RGB-2/80D-36V-12mm",
-      image: "/src/assets/CM_ML-3.png",
+      image: cmML3,
       category: "RGB Strip",
       itemCode: "ML-5050RGB-12",
       length: "5M",
@@ -46,7 +54,7 @@ export default function CommercialLights() {
     {
       id: 4,
       name: "2835RGB-2/120D-24V-10mm",
-      image: "/src/assets/CM_ML-4.png",
+      image: cmML4,
       category: "RGB Strip",
       itemCode: "ML-2835RGB-10",
       length: "5M",
@@ -57,7 +65,7 @@ export default function CommercialLights() {
     {
       id: 5,
       name: "5050RGB-2/60D-24V-12mm",
-      image: "/src/assets/CM_ML-5.png",
+      image: cmML5,
       category: "RGB Strip",
       itemCode: "ML-5050RGB-24",
       length: "5M",
@@ -68,7 +76,7 @@ export default function CommercialLights() {
     {
       id: 6,
       name: "2835RGB-8/96D-24V-8mm",
-      image: "/src/assets/CM_ML-6.png",
+      image: cmML6,
       category: "RGB Strip",
       itemCode: "ML-2835RGB-8",
       length: "5M",
@@ -79,7 +87,7 @@ export default function CommercialLights() {
     {
       id: 7,
       name: "2835W-4/120D-24V-10mm",
-      image: "/src/assets/CM_ML-7.png",
+      image: cmML7,
       category: "White Strip",
       itemCode: "ML-2835W-10",
       length: "5M",
@@ -90,7 +98,7 @@ export default function CommercialLights() {
     {
       id: 8,
       name: "2835W-6/120D-24V-10mm",
-      image: "/src/assets/CM_ML-8.png",
+      image: cmML8,
       category: "White Strip",
       itemCode: "ML-2835W-6",
       length: "5M",

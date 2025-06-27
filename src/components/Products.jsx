@@ -1,14 +1,13 @@
 import { Link } from 'react-router-dom'
 import { useState, useEffect } from 'react'
+import cmSS1 from '../assets/CM_SS-1.png'
+import cmSS2 from '../assets/CM_SS-2.png'
+import cmSS3 from '../assets/CM_SS-3.png'
 
 // Slideshow component for Commercial product images
 function CommercialSlideshow() {
   const [currentImageIndex, setCurrentImageIndex] = useState(0);
-  const images = [
-    '/src/assets/CM_SS-1.png',
-    '/src/assets/CM_SS-2.png',
-    '/src/assets/CM_SS-3.png'
-  ];
+  const images = [cmSS1, cmSS2, cmSS3];
 
   useEffect(() => {
     const interval = setInterval(() => {
