@@ -83,26 +83,11 @@ export default function Contact() {
                   ></textarea>
                 </div>
 
-                <div className="flex items-center">
-                  <input
-                    type="checkbox"
-                    id="acceptTerms"
-                    name="acceptTerms"
-                    checked={formData.acceptTerms}
-                    onChange={handleChange}
-                    className="h-4 w-4 text-neon-pink focus:ring-neon-pink border-gray-300 rounded"
-                    required
-                  />
-                  <label htmlFor="acceptTerms" className="ml-2 block text-sm text-gray-700">
-                    I accept the Terms
-                  </label>
-                </div>
-
                 <button
                   type="submit"
                   className="w-full bg-gradient-to-r from-neon-pink to-neon-purple text-white font-semibold py-3 px-6 rounded-lg hover:shadow-lg hover:shadow-neon-pink/30 transition-all duration-300 transform hover:scale-105"
                 >
-                  Start Innovation
+                  Send message!
                 </button>
               </form>
             </div>

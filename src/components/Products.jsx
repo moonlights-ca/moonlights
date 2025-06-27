@@ -15,7 +15,7 @@ function CommercialSlideshow() {
       setCurrentImageIndex((prevIndex) => 
         prevIndex === images.length - 1 ? 0 : prevIndex + 1
       );
-    }, 3000); // Change image every 3 seconds
+    }, 2000); // Change image every 3 seconds
 
     return () => clearInterval(interval);
   }, [images.length]);
