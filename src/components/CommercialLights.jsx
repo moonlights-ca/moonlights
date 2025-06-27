@@ -13,7 +13,7 @@ export default function CommercialLights() {
     {
       id: 1,
       name: "5050RGB+2835W-10/60+240D-24V-15mm",
-      image: "/api/placeholder/300/200",
+      image: "/src/assets/CM_ML-1.png",
       category: "RGB+White Strip",
       itemCode: "ML-5050RGB-15",
       length: "5M",
@@ -24,7 +24,7 @@ export default function CommercialLights() {
     {
       id: 2,
       name: "5050RGB+2835W-8/56+120D-24V-15mm",
-      image: "/api/placeholder/300/200",
+      image: "/src/assets/CM_ML-2.png",
       category: "RGB+White Strip",
       itemCode: "ML-5050RGB-8",
       length: "5M",
@@ -35,7 +35,7 @@ export default function CommercialLights() {
     {
       id: 3,
       name: "5050RGB-2/80D-36V-12mm",
-      image: "/api/placeholder/300/200",
+      image: "/src/assets/CM_ML-3.png",
       category: "RGB Strip",
       itemCode: "ML-5050RGB-12",
       length: "5M",
@@ -46,7 +46,7 @@ export default function CommercialLights() {
     {
       id: 4,
       name: "2835RGB-2/120D-24V-10mm",
-      image: "/api/placeholder/300/200",
+      image: "/src/assets/CM_ML-4.png",
       category: "RGB Strip",
       itemCode: "ML-2835RGB-10",
       length: "5M",
@@ -57,7 +57,7 @@ export default function CommercialLights() {
     {
       id: 5,
       name: "5050RGB-2/60D-24V-12mm",
-      image: "/api/placeholder/300/200",
+      image: "/src/assets/CM_ML-5.png",
       category: "RGB Strip",
       itemCode: "ML-5050RGB-24",
       length: "5M",
@@ -68,7 +68,7 @@ export default function CommercialLights() {
     {
       id: 6,
       name: "2835RGB-8/96D-24V-8mm",
-      image: "/api/placeholder/300/200",
+      image: "/src/assets/CM_ML-6.png",
       category: "RGB Strip",
       itemCode: "ML-2835RGB-8",
       length: "5M",
@@ -79,7 +79,7 @@ export default function CommercialLights() {
     {
       id: 7,
       name: "2835W-4/120D-24V-10mm",
-      image: "/api/placeholder/300/200",
+      image: "/src/assets/CM_ML-7.png",
       category: "White Strip",
       itemCode: "ML-2835W-10",
       length: "5M",
@@ -90,7 +90,7 @@ export default function CommercialLights() {
     {
       id: 8,
       name: "2835W-6/120D-24V-10mm",
-      image: "/api/placeholder/300/200",
+      image: "/src/assets/CM_ML-8.png",
       category: "White Strip",
       itemCode: "ML-2835W-6",
       length: "5M",
@@ -130,7 +130,7 @@ export default function CommercialLights() {
               </div>
               
               <h1 className="text-5xl md:text-7xl font-bold mb-6 leading-tight">
-                <span className="bg-clip-text bg-gradient-to-r from-neon-blue to-neon-cyan animate-glow">Commercial</span> LED Systems
+                <span className="bg-clip-text  animate-glow">Commercial</span> LED Systems
               </h1>
               
               <p className="text-xl md:text-2xl text-gray-300 mb-8 max-w-3xl mx-auto">
@@ -138,15 +138,15 @@ export default function CommercialLights() {
               </p>
 
               <div className="flex justify-center space-x-4 mb-12">
-                <div className="text-center p-4 bg-dark-700 rounded-lg border border-neon-blue/20">
+                <div className="text-center">
                   <div className="text-2xl font-bold text-neon-blue mb-2">24/7</div>
                   <div className="text-gray-400 text-sm">Reliability</div>
                 </div>
-                <div className="text-center p-4 bg-dark-700 rounded-lg border border-neon-cyan/20">
+                <div className="text-center">
                   <div className="text-2xl font-bold text-neon-cyan mb-2">IP68</div>
                   <div className="text-gray-400 text-sm">Protection</div>
                 </div>
-                <div className="text-center p-4 bg-dark-700 rounded-lg border border-neon-blue/20">
+                <div className="text-center">
                   <div className="text-2xl font-bold text-neon-blue mb-2">50K+</div>
                   <div className="text-gray-400 text-sm">Hours Lifespan</div>
                 </div>
@@ -160,7 +160,7 @@ export default function CommercialLights() {
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="text-center mb-16">
               <h2 className="text-4xl md:text-5xl font-bold mb-6">
-                Product <span className="bg-clip-text bg-gradient-to-r from-neon-blue to-neon-cyan">Showcase</span>
+                Product <span className="bg-clip-text ">Showcase</span>
               </h2>
               <p className="text-lg text-gray-400 max-w-3xl mx-auto">
                 Explore our comprehensive range of commercial LED strip lights designed for professional applications
@@ -169,19 +169,16 @@ export default function CommercialLights() {
 
             {/* Products Grid */}
             <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6 mb-16">
-              {commercialProducts.map((product) => (
-                <div key={product.id} className="group cursor-pointer">
+              {commercialProducts.map((product) => (                  <div key={product.id} className="group cursor-pointer">
                   <div className="bg-dark-700 rounded-xl overflow-hidden border border-gray-700 hover:border-neon-blue/50 transition-all duration-500 hover:shadow-xl hover:shadow-neon-blue/20 hover:scale-105">
-                    {/* Product Image Placeholder */}
+                    {/* Product Image */}
                     <div className="aspect-square bg-gradient-to-br from-neon-blue to-neon-cyan p-0.5">
-                      <div className="w-full h-full bg-dark-800 rounded-t-lg flex items-center justify-center relative overflow-hidden">
-                        <div className="flex space-x-2">
-                          <div className="w-2 h-12 bg-gradient-to-t from-neon-blue to-neon-cyan rounded animate-pulse"></div>
-                          <div className="w-2 h-16 bg-gradient-to-t from-neon-cyan to-neon-blue rounded animate-pulse delay-150"></div>
-                          <div className="w-2 h-10 bg-gradient-to-t from-neon-blue to-neon-cyan rounded animate-pulse delay-300"></div>
-                          <div className="w-2 h-14 bg-gradient-to-t from-neon-cyan to-neon-blue rounded animate-pulse delay-450"></div>
-                        </div>
-                        <div className="absolute inset-0 bg-gradient-to-r from-transparent via-neon-blue/10 to-transparent animate-pulse"></div>
+                      <div className="w-full h-full bg-dark-800 rounded-t-lg overflow-hidden">
+                        <img 
+                          src={product.image} 
+                          alt={product.name}
+                          className="w-full h-full object-cover transition-transform duration-300 group-hover:scale-110"
+                        />
                       </div>
                     </div>
                     
@@ -190,7 +187,7 @@ export default function CommercialLights() {
                       <h3 className="text-sm font-semibold mb-2 text-white group-hover:text-neon-blue transition-colors truncate">
                         {product.name}
                       </h3>
-                      <span className="inline-block px-2 py-1 bg-gradient-to-r from-neon-blue to-neon-cyan text-white text-xs rounded-full font-medium mb-2">
+                      <span className="inline-block px-2 py-1  text-white text-xs rounded-full font-medium mb-2">
                         {product.category}
                       </span>
                       <div className="text-xs text-gray-400 space-y-1">
@@ -210,7 +207,7 @@ export default function CommercialLights() {
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="text-center mb-16">
               <h2 className="text-4xl md:text-5xl font-bold mb-6">
-                Technical <span className="bg-clip-text bg-gradient-to-r from-neon-blue to-neon-cyan">Specifications</span>
+                Technical <span className="bg-clip-text ">Specifications</span>
               </h2>
               <p className="text-lg text-gray-400 max-w-3xl mx-auto">
                 Detailed specifications for our commercial LED lighting solutions
@@ -220,7 +217,7 @@ export default function CommercialLights() {
             {/* Creative Table Design */}
             <div className="bg-gradient-to-br from-dark-800 to-dark-700 rounded-2xl border border-neon-blue/20 overflow-hidden">
               {/* Table Header */}
-              <div className="bg-gradient-to-r from-neon-blue to-neon-cyan p-1">
+              <div className=" p-1">
                 <div className="bg-dark-800 rounded-t-xl">
                   <div className="grid grid-cols-6 gap-4 p-6 text-white font-bold">
                     <div className="text-center">ITEM CODE</div>
@@ -251,10 +248,10 @@ export default function CommercialLights() {
                     </div>
                     <div className="text-center">
                       <span className={`inline-block px-2 py-1 rounded-full text-xs font-medium ${
-                        product.ipRating === 'IP68' ? 'bg-neon-green/20 text-neon-green border border-neon-green/30' :
-                        product.ipRating === 'IP67' ? 'bg-neon-blue/20 text-neon-blue border border-neon-blue/30' :
-                        product.ipRating === 'IP65' ? 'bg-neon-cyan/20 text-neon-cyan border border-neon-cyan/30' :
-                        'bg-neon-purple/20 text-neon-purple border border-neon-purple/30'
+                        product.ipRating === 'IP68' ? 'text-neon-green' :
+                        product.ipRating === 'IP67' ? 'text-neon-blue' :
+                        product.ipRating === 'IP65' ? 'text-neon-cyan' :
+                        'text-neon-purple'
                       }`}>
                         {product.ipRating}
                       </span>
@@ -270,7 +267,7 @@ export default function CommercialLights() {
             {/* Features Section */}
             <div className="mt-16 grid md:grid-cols-3 gap-8">
               <div className="text-center p-8 bg-dark-700 rounded-xl border border-neon-blue/20 hover:border-neon-blue/50 transition-all duration-300">
-                <div className="w-16 h-16 bg-gradient-to-r from-neon-blue to-neon-cyan rounded-full flex items-center justify-center mx-auto mb-6">
+                <div className="w-16 h-16  rounded-full flex items-center justify-center mx-auto mb-6">
                   <span className="text-white text-2xl">⚡</span>
                 </div>
                 <h3 className="text-xl font-semibold text-white mb-4">High Efficiency</h3>
@@ -290,7 +287,7 @@ export default function CommercialLights() {
               </div>
 
               <div className="text-center p-8 bg-dark-700 rounded-xl border border-neon-blue/20 hover:border-neon-blue/50 transition-all duration-300">
-                <div className="w-16 h-16 bg-gradient-to-r from-neon-blue to-neon-cyan rounded-full flex items-center justify-center mx-auto mb-6">
+                <div className="w-16 h-16  rounded-full flex items-center justify-center mx-auto mb-6">
                   <span className="text-white text-2xl">🔧</span>
                 </div>
                 <h3 className="text-xl font-semibold text-white mb-4">Easy Installation</h3>
@@ -303,7 +300,7 @@ export default function CommercialLights() {
             {/* CTA Section */}
             <div className="mt-16 text-center">
               <div className="bg-gradient-to-r from-dark-800 to-dark-700 rounded-2xl p-8 border border-neon-blue/20">
-                <h3 className="text-3xl font-bold mb-4 bg-clip-text bg-gradient-to-r from-neon-blue to-neon-cyan">
+                <h3 className="text-3xl font-bold mb-4 bg-clip-text ">
                   Ready to Illuminate Your Commercial Space?
                 </h3>
                 <p className="text-gray-400 mb-8 max-w-2xl mx-auto">

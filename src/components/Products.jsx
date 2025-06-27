@@ -1,4 +1,40 @@
 import { Link } from 'react-router-dom'
+import { useState, useEffect } from 'react'
+
+// Slideshow component for Commercial product images
+function CommercialSlideshow() {
+  const [currentImageIndex, setCurrentImageIndex] = useState(0);
+  const images = [
+    '/src/assets/CM_SS-1.png',
+    '/src/assets/CM_SS-2.png',
+    '/src/assets/CM_SS-3.png'
+  ];
+
+  useEffect(() => {
+    const interval = setInterval(() => {
+      setCurrentImageIndex((prevIndex) => 
+        prevIndex === images.length - 1 ? 0 : prevIndex + 1
+      );
+    }, 3000); // Change image every 3 seconds
+
+    return () => clearInterval(interval);
+  }, [images.length]);
+
+  return (
+    <div className="w-full h-full relative">
+      {images.map((image, index) => (
+        <img
+          key={index}
+          src={image}
+          alt={`Commercial Light ${index + 1}`}
+          className={`w-full h-full object-cover absolute top-0 left-0 transition-opacity duration-500 ${
+            index === currentImageIndex ? 'opacity-100' : 'opacity-0'
+          }`}
+        />
+      ))}
+    </div>
+  );
+}
 
 export default function Products() {
   const products = [
@@ -74,12 +110,7 @@ export default function Products() {
                         </div>
                       )}
                       {product.category === "Commercial" && (
-                        <div className="flex space-x-3">
-                          <div className="w-3 h-16 bg-gradient-to-t from-neon-blue to-neon-cyan rounded animate-pulse"></div>
-                          <div className="w-3 h-20 bg-gradient-to-t from-neon-pink to-neon-purple rounded animate-pulse delay-150"></div>
-                          <div className="w-3 h-14 bg-gradient-to-t from-neon-green to-neon-blue rounded animate-pulse delay-300"></div>
-                          <div className="w-3 h-18 bg-gradient-to-t from-neon-purple to-neon-pink rounded animate-pulse delay-450"></div>
-                        </div>
+                        <CommercialSlideshow />
                       )}
                     </div>
                   </div>
