@@ -25,7 +25,7 @@ function HomePage() {
 
 function App() {
   return (
-    <Router basename="/moonlights">
+    <Router>
       <Routes>
         <Route path="/" element={<HomePage />} />
         <Route path="/commercial-lights" element={<CommercialLights />} />
