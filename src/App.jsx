@@ -8,6 +8,7 @@ import Contact from './components/Contact.jsx'
 import Footer from './components/Footer.jsx'
 import CommercialLights from './components/CommercialLights.jsx'
 import ResidentialLights from './components/ResidentialLights.jsx'
+import CustomMoonlights from './components/CustomMoonlights.jsx'
 
 // Home page component
 function HomePage() {
@@ -33,6 +34,7 @@ function App() {
         <Route path="/" element={<HomePage />} />
         <Route path="/commercial-lights" element={<CommercialLights />} />
         <Route path="/residential-lights" element={<ResidentialLights />} />
+        <Route path="/custom-moonlights" element={<CustomMoonlights />} />
       </Routes>
     </Router>
   )

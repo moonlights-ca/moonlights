@@ -16,7 +16,8 @@ export default function Header() {
 
   const productDropdownItems = [
     { label: 'Residential Lights', href: '/residential-lights' },
-    { label: 'Commercial Lights', href: '/commercial-lights' }
+    { label: 'Commercial Lights', href: '/commercial-lights' },
+    { label: 'Custom moonlights', href: '/custom-moonlights' }
   ]
 
   return (
