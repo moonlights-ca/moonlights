@@ -201,22 +201,24 @@ export default function Products() {
 
         {/* Custom Solutions Call-to-Action */}
         <div className="mt-16 text-center max-w-4xl mx-auto">
-          <div className="bg-gradient-to-r from-dark-800 to-dark-700 rounded-2xl p-8 border border-neon-blue/20">
-            <h3 className="text-3xl font-bold mb-4 bg-clip-text text-transparent bg-gradient-to-r from-neon-pink to-neon-purple">
-              Need Custom Specifications?
-            </h3>
-            <p className="text-gray-400 mb-8 max-w-2xl mx-auto">
-              Create your perfect LED solution with our interactive specification builder and get instant quotes for custom configurations.
-            </p>
-            <div className="flex justify-center">
-              <Link 
-                to="/custom-moonlights" 
-                className="bg-gradient-to-r from-neon-pink to-neon-purple text-white px-8 py-4 rounded-lg font-medium hover:shadow-lg hover:shadow-neon-pink/30 transition-all duration-300 text-lg"
-              >
-                Build Custom Moonlights
-              </Link>
+          <Link 
+            to="/custom-moonlights" 
+            className="block group cursor-pointer"
+          >
+            <div className="bg-dark-700 rounded-2xl p-8  border border-gray-700 hover:scale-105 hover:border-neon-pink/50 transition-all duration-500">
+              <h3 className="text-3xl font-bold mb-4 bg-clip-text text-transparent bg-gradient-to-r from-neon-pink to-neon-purple">
+                Need Custom Specifications?
+              </h3>
+              <p className="text-gray-400 mb-8 max-w-2xl mx-auto">
+                Create your perfect LED solution with our interactive specification builder and get instant quotes for custom configurations.
+              </p>
+              <div className="flex justify-center">
+                <span className="btn-primary">
+                  Build Custom Moonlights
+                </span>
+              </div>
             </div>
-          </div>
+          </Link>
         </div>
       </div>
     </section>

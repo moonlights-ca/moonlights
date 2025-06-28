@@ -97,6 +97,7 @@ h1, h2, h3, h4, h5, h6 {
   text-decoration: none;
   display: inline-block;
   text-align: center;
+  z-index: 1;
 }
 
 .btn-primary::before {
@@ -106,6 +107,7 @@ h1, h2, h3, h4, h5, h6 {
   background: linear-gradient(135deg, var(--neon-purple), var(--neon-blue));
   opacity: 0;
   transition: opacity 0.3s ease;
+  z-index: -1;
 }
 
 .btn-primary:hover::before {
@@ -115,12 +117,15 @@ h1, h2, h3, h4, h5, h6 {
 .btn-primary:hover {
   transform: translateY(-2px);
   box-shadow: 0 20px 40px rgba(255, 0, 128, 0.3);
+  color: white !important;
 }
 
 .btn-primary span,
-.btn-primary * {
+.btn-primary *,
+.btn-primary {
   position: relative;
-  z-index: 1;
+  z-index: 2;
+  color: white !important;
 }
 
 .btn-secondary {

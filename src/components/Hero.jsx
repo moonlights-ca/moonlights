@@ -16,14 +16,14 @@ export default function Hero() {
 
       <div className="relative z-10 text-center max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
         <h1 className="text-5xl md:text-7xl font-bold mb-6 leading-tight">
-          Illuminate Tomorrow with <span className="bg-clip-text bg-gradient-to-r from-neon-pink to-neon-purple animate-glow">moonlights</span>
+          Illuminate Tomorrow with moon<span className="bg-clip-text bg-gradient-to-r from-neon-pink to-neon-purple animate-glow">lights</span>
         </h1>
         
         <p className="text-xl md:text-2xl text-gray-300 mb-8 max-w-2xl mx-auto">
           Professional LED Safety Light Systems for modern environments and enhanced security
         </p>
 
-        <div className="flex flex-col sm:flex-row gap-4 justify-center items-center mb-12">
+        <div className="flex flex-col sm:flex-row gap-4 justify-center items-center mb-12 ">
           <a href="#products" className="btn-primary text-lg px-8 py-4">
             Explore Solutions
           </a>

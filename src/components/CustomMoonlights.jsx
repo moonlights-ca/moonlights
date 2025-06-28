@@ -1,4 +1,4 @@
-import { useState } from 'react'
+import { useState, useEffect } from 'react'
 import { Link } from 'react-router-dom'
 import Header from './Header'
 import Footer from './Footer'
@@ -21,6 +21,11 @@ export default function CustomMoonlights() {
   })
 
   const [selectedSpecs, setSelectedSpecs] = useState({})
+
+  // Scroll to top when component mounts
+  useEffect(() => {
+    window.scrollTo(0, 0)
+  }, [])
 
   // Product specifications data
   const specCategories = [
@@ -386,7 +391,7 @@ ${formData.message}`;
               <div className="text-center">
                 <button
                   type="submit"
-                  className="bg-gradient-to-r from-neon-pink to-neon-purple text-white px-8 py-4 rounded-lg font-medium hover:shadow-lg hover:shadow-neon-pink/30 transition-all duration-300 text-lg"
+                  className="btn-primary"
                 >
                   Request Custom Quote
                 </button>

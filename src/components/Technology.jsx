@@ -35,10 +35,10 @@ export default function Technology() {
               </div>
 
               <div className="mt-8 space-x-4">
-                <a href="#products" className="bg-gradient-to-r from-neon-pink to-neon-purple text-white px-6 py-3 rounded-lg font-medium hover:shadow-lg hover:shadow-neon-pink/30 transition-all duration-300 inline-block">
+                <a href="#products" className="btn-primary">
                   Explore Products
                 </a>
-                <a href="#contact" className="border border-neon-blue text-neon-blue hover:bg-neon-blue hover:text-white px-6 py-3 rounded-lg font-medium transition-all duration-300 inline-block">
+                <a href="#contact" className="btn-secondary">
                   Get Quote
                 </a>
               </div>
