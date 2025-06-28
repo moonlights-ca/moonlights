@@ -113,7 +113,7 @@ export default function Products() {
                 return (
                   <Link 
                     to="/commercial-lights" 
-                    className="group cursor-pointer block"
+                    className="group cursor-pointer block h-full"
                   >
                     {children}
                   </Link>
@@ -122,14 +122,14 @@ export default function Products() {
                 return (
                   <Link 
                     to="/residential-lights" 
-                    className="group cursor-pointer block"
+                    className="group cursor-pointer block h-full"
                   >
                     {children}
                   </Link>
                 );
               }
               return (
-                <div className="group cursor-pointer">
+                <div className="group cursor-pointer h-full">
                   {children}
                 </div>
               );
@@ -137,7 +137,7 @@ export default function Products() {
 
             return (
               <ProductCard key={product.id}>
-                <div className="bg-dark-700 rounded-xl overflow-hidden border border-gray-700 hover:border-neon-pink/50 transition-all duration-500 hover:shadow-xl hover:shadow-neon-pink/20 hover:scale-105">
+                <div className="bg-dark-700 rounded-xl overflow-hidden border border-gray-700 hover:border-neon-pink/50 transition-all duration-500 hover:shadow-xl hover:shadow-neon-pink/20 hover:scale-105 h-full flex flex-col">
                   {/* Product Image Placeholder */}
                   <div className={`aspect-video bg-gradient-to-br ${product.color} p-0.5`}>
                     <div className="w-full h-full bg-dark-800 rounded-t-lg flex items-center justify-center relative overflow-hidden">
@@ -151,11 +151,11 @@ export default function Products() {
                   </div>
                   
                   {/* Product Info */}
-                  <div className="p-6">
+                  <div className="p-6 flex-1 flex flex-col">
                     <h3 className="text-xl font-semibold mb-3 text-white group-hover:text-neon-pink transition-colors">
                       {product.name}
                     </h3>
-                    <p className="text-gray-400 mb-4 text-sm leading-relaxed">
+                    <p className="text-gray-400 mb-4 text-sm leading-relaxed flex-1">
                       {product.description}
                     </p>
                     
@@ -168,7 +168,7 @@ export default function Products() {
                       ))}
                     </div>
                     
-                    <div className="flex justify-between items-center">
+                    <div className="flex justify-between items-center mt-auto">
                       <span className={`inline-block px-3 py-1 bg-gradient-to-r ${product.color} text-white text-sm rounded-full font-medium`}>
                         {product.category}
                       </span>
@@ -200,7 +200,7 @@ export default function Products() {
         </div>
 
         {/* Custom Solutions Call-to-Action */}
-        <div className="mt-16 text-center">
+        <div className="mt-16 text-center max-w-4xl mx-auto">
           <div className="bg-gradient-to-r from-dark-800 to-dark-700 rounded-2xl p-8 border border-neon-blue/20">
             <h3 className="text-3xl font-bold mb-4 bg-clip-text text-transparent bg-gradient-to-r from-neon-pink to-neon-purple">
               Need Custom Specifications?
@@ -208,19 +208,13 @@ export default function Products() {
             <p className="text-gray-400 mb-8 max-w-2xl mx-auto">
               Create your perfect LED solution with our interactive specification builder and get instant quotes for custom configurations.
             </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
+            <div className="flex justify-center">
               <Link 
                 to="/custom-moonlights" 
                 className="bg-gradient-to-r from-neon-pink to-neon-purple text-white px-8 py-4 rounded-lg font-medium hover:shadow-lg hover:shadow-neon-pink/30 transition-all duration-300 text-lg"
               >
                 Build Custom Moonlights
               </Link>
-              <a 
-                href="#contact" 
-                className="border border-neon-blue text-neon-blue hover:bg-neon-blue hover:text-white px-8 py-4 rounded-lg font-medium transition-all duration-300 text-lg"
-              >
-                Contact Sales
-              </a>
             </div>
           </div>
         </div>
