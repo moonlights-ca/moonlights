@@ -11,7 +11,7 @@ export default function Technology() {
                 The Future is <span className="bg-clip-text bg-gradient-to-r from-neon-pink to-neon-purple">Bright</span>
               </h2>
               <p className="text-gray-400 mb-6 text-lg">
-                Moonlights is pioneering the next generation of LED lighting systems. Our startup is built on 
+                moonlights is pioneering the next generation of LED lighting systems. Our startup is built on 
                 innovation, sustainability, and the vision of creating safer environments through quality lighting technology.
               </p>
               

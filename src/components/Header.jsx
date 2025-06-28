@@ -9,9 +9,9 @@ export default function Header() {
 
   const navItems = [
     { label: 'Home', href: isHomePage ? '#home' : '/#home' },
-    { label: 'About Us', href: isHomePage ? '#about' : '/#about' },
+    { label: 'About us', href: isHomePage ? '#about' : '/#about' },
     { label: 'Products', href: isHomePage ? '#products' : '/#products', hasDropdown: true },
-    { label: 'Contact Us', href: isHomePage ? '#contact' : '/#contact' }
+    { label: 'Contact us', href: isHomePage ? '#contact' : '/#contact' }
   ]
 
   const productDropdownItems = [

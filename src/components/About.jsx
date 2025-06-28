@@ -24,7 +24,7 @@ export default function About() {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-16">
           <h2 className="text-4xl md:text-5xl font-bold mb-6">
-            About <span className="bg-clip-text bg-gradient-to-r from-neon-pink to-neon-purple">Moonlights</span>
+            About <span className="bg-clip-text bg-gradient-to-r from-neon-pink to-neon-purple">moonlights</span>
           </h2>
           <p className="text-lg text-gray-400 max-w-3xl mx-auto">
             We're a passionate team of innovators on a mission to revolutionize lighting technology and create smarter, safer environments for tomorrow.
@@ -37,7 +37,7 @@ export default function About() {
             <h3 className="text-3xl font-bold text-white">Our Vision</h3>
             <div className="space-y-4">
               <p className="text-gray-400 leading-relaxed">
-                Founded with a vision to transform how we think about lighting, Moonlights is pioneering the next generation 
+                Founded with a vision to transform how we think about lighting, moonlights is pioneering the next generation 
                 of LED systems. We believe that lighting should be more than just illumination—it should be reliable, 
                 efficient, and seamlessly integrated into our environments.
               </p>

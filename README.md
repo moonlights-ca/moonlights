@@ -1,6 +1,6 @@
-# Moonlights - LED Safety Light Systems
+# moonlights - LED Safety Light Systems
 
-A modern, responsive website for Moonlights, an innovative startup developing next-generation LED Safety Light Systems with IoT connectivity.
+A modern, responsive website for moonlights, an innovative startup developing next-generation LED Safety Light Systems with IoT connectivity.
 
 ## Features
 
@@ -54,9 +54,9 @@ A modern, responsive website for Moonlights, an innovative startup developing ne
 
 ## Contact
 
-For inquiries about Moonlights LED Safety Light Systems, visit the contact section on the website.
+For inquiries about moonlights LED Safety Light Systems, visit the contact section on the website.
 
-© 2025 Moonlights. All rights reserved.+ Vite
+© 2025 moonlights. All rights reserved.+ Vite
 
 This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
 
