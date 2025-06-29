@@ -21,6 +21,7 @@ export default function CustomMoonlights() {
   })
 
   const [selectedSpecs, setSelectedSpecs] = useState({})
+  const [result, setResult] = useState("")
 
   // Scroll to top when component mounts
   useEffect(() => {
@@ -92,13 +93,15 @@ export default function CustomMoonlights() {
     }));
   };
 
-  const handleSubmit = (e) => {
-    e.preventDefault();
+  const handleSubmit = async (event) => {
+    event.preventDefault()
+    setResult("Sending....")
+    
     // Generate specifications summary
     const specsText = Object.entries(selectedSpecs)
       .filter(([key, value]) => value)
       .map(([key, value]) => `${key}: ${value}`)
-      .join(', ');
+      .join(', ')
     
     const fullMessage = `Custom moonlights Request:
     
@@ -110,12 +113,46 @@ Type: ${formData.projectType}
 Quantity: ${formData.quantity}
 
 Additional Message:
-${formData.message}`;
+${formData.message}`
 
-    // For now, we'll log the form data. In a real implementation, this would be sent to a server
-    console.log('Custom moonlights request:', { ...formData, specifications: specsText });
-    alert('Your custom moonlights request has been submitted! We will contact you soon.');
-  };
+    const formDataToSend = new FormData(event.target)
+    
+    // Add the formatted message with specifications
+    formDataToSend.append("customMessage", fullMessage)
+    formDataToSend.append("specifications", specsText)
+    formDataToSend.append("access_key", "48813945-89bd-4cde-8e90-4aca63b6d1d3")
+
+    const response = await fetch("https://api.web3forms.com/submit", {
+      method: "POST",
+      body: formDataToSend
+    })
+
+    const data = await response.json()
+
+    if (data.success) {
+      setResult("Form Submitted Successfully")
+      event.target.reset()
+      setSelectedSpecs({})
+      setFormData({
+        chipType: '',
+        colorTemperature: '',
+        ledDensity: '',
+        protectionRating: '',
+        pcbWidth: '',
+        brightness: '',
+        projectType: '',
+        quantity: '',
+        customerName: '',
+        email: '',
+        phone: '',
+        company: '',
+        message: ''
+      })
+    } else {
+      console.log("Error", data)
+      setResult(data.message)
+    }
+  }
 
   return (
     <div className="min-h-screen bg-dark-900">
@@ -276,8 +313,6 @@ ${formData.message}`;
                     <input
                       type="text"
                       name="customerName"
-                      value={formData.customerName}
-                      onChange={handleInputChange}
                       required
                       className="w-full px-4 py-3 bg-dark-700 border border-gray-600 rounded-lg text-white placeholder-gray-400 focus:border-neon-pink focus:outline-none transition-colors"
                       placeholder="Your full name"
@@ -289,8 +324,6 @@ ${formData.message}`;
                     <input
                       type="email"
                       name="email"
-                      value={formData.email}
-                      onChange={handleInputChange}
                       required
                       className="w-full px-4 py-3 bg-dark-700 border border-gray-600 rounded-lg text-white placeholder-gray-400 focus:border-neon-pink focus:outline-none transition-colors"
                       placeholder="your.email@example.com"
@@ -302,8 +335,6 @@ ${formData.message}`;
                     <input
                       type="tel"
                       name="phone"
-                      value={formData.phone}
-                      onChange={handleInputChange}
                       className="w-full px-4 py-3 bg-dark-700 border border-gray-600 rounded-lg text-white placeholder-gray-400 focus:border-neon-pink focus:outline-none transition-colors"
                       placeholder="Your phone number"
                     />
@@ -314,8 +345,6 @@ ${formData.message}`;
                     <input
                       type="text"
                       name="company"
-                      value={formData.company}
-                      onChange={handleInputChange}
                       className="w-full px-4 py-3 bg-dark-700 border border-gray-600 rounded-lg text-white placeholder-gray-400 focus:border-neon-pink focus:outline-none transition-colors"
                       placeholder="Company name (optional)"
                     />
@@ -330,8 +359,6 @@ ${formData.message}`;
                     <label className="block text-sm font-medium text-gray-300 mb-2">Project Type *</label>
                     <select
                       name="projectType"
-                      value={formData.projectType}
-                      onChange={handleInputChange}
                       required
                       className="w-full px-4 py-3 bg-dark-700 border border-gray-600 rounded-lg text-white focus:border-neon-pink focus:outline-none transition-colors"
                     >
@@ -350,8 +377,6 @@ ${formData.message}`;
                     <input
                       type="text"
                       name="quantity"
-                      value={formData.quantity}
-                      onChange={handleInputChange}
                       className="w-full px-4 py-3 bg-dark-700 border border-gray-600 rounded-lg text-white placeholder-gray-400 focus:border-neon-pink focus:outline-none transition-colors"
                       placeholder="e.g., 100 meters, 50 units"
                     />
@@ -379,8 +404,6 @@ ${formData.message}`;
                 <label className="block text-sm font-medium text-gray-300 mb-2">Additional Requirements</label>
                 <textarea
                   name="message"
-                  value={formData.message}
-                  onChange={handleInputChange}
                   rows={4}
                   className="w-full px-4 py-3 bg-dark-700 border border-gray-600 rounded-lg text-white placeholder-gray-400 focus:border-neon-pink focus:outline-none transition-colors resize-none"
                   placeholder="Please describe your project requirements, timeline, or any special considerations..."
@@ -396,6 +419,21 @@ ${formData.message}`;
                   Request Custom Quote
                 </button>
               </div>
+
+              {/* Result display */}
+              {result && (
+                <div className="mt-6 text-center">
+                  <span className={`text-sm font-medium ${
+                    result === "Form Submitted Successfully" 
+                      ? "text-green-400" 
+                      : result === "Sending...." 
+                        ? "text-blue-400" 
+                        : "text-red-400"
+                  }`}>
+                    {result}
+                  </span>
+                </div>
+              )}
             </form>
           </div>
         </section>
