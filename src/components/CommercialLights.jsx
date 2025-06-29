@@ -3,108 +3,88 @@ import { useEffect } from 'react'
 import Header from './Header'
 import Footer from './Footer'
 import cmML1 from '../assets/CM_ML-1.png'
-import cmML2 from '../assets/CM_ML-2.png'
-import cmML3 from '../assets/CM_ML-3.png'
 import cmML4 from '../assets/CM_ML-4.png'
-import cmML5 from '../assets/CM_ML-5.png'
 import cmML6 from '../assets/CM_ML-6.png'
 import cmML7 from '../assets/CM_ML-7.png'
-import cmML8 from '../assets/CM_ML-8.png'
 
 export default function CommercialLights() {
   // Scroll to top when component mounts
   useEffect(() => {
     window.scrollTo(0, 0)
   }, [])
-  // Commercial LED products data based on the reference image
+  // Commercial LED products data - professional showcase selection
   const commercialProducts = [
     {
       id: 1,
-      name: "5050RGB+2835W-10/60+240D-24V-15mm",
+      name: "Professional RGB+White Strip",
       image: cmML1,
-      category: "RGB+White Strip",
-      itemCode: "moon-5050RGB-15",
-      length: "5M",
-      watts: "14.4W/M",
-      volts: "24V",
-      ipRating: "IP65"
+      description: "Premium RGB+White LED strip combining vibrant color and pure white light for versatile commercial applications.",
+      features: ["RGB + White Combined", "High Color Accuracy", "Professional Grade", "Long Lifespan", "Modular Design"],
+      specifications: {
+        chipType: "5050RGB+2835W",
+        powerConsumption: "14.4W/M",
+        voltage: "24V DC",
+        ipRating: "IP65",
+        density: "60 LEDs/m",
+        width: "15mm"
+      },
+      applications: ["Retail Displays", "Hospitality Lighting", "Architectural Accents", "Entertainment Venues"],
+      color: "from-neon-purple to-neon-pink",
+      itemCode: "moon-5050RGB-15"
     },
     {
       id: 2,
-      name: "5050RGB+2835W-8/56+120D-24V-15mm",
-      image: cmML2,
-      category: "RGB+White Strip",
-      itemCode: "moon-5050RGB-8",
-      length: "5M",
-      watts: "12.0W/M",
-      volts: "24V",
-      ipRating: "IP65"
+      name: "High-Density RGB Strip",
+      image: cmML4,
+      description: "Compact high-performance RGB LED strip designed for detailed lighting applications requiring precise color control.",
+      features: ["Ultra-Compact Design", "High Color Saturation", "Energy Efficient", "Easy Integration", "Smooth Color Mixing"],
+      specifications: {
+        chipType: "2835RGB",
+        powerConsumption: "9.6W/M",
+        voltage: "24V DC",
+        ipRating: "IP67",
+        density: "120 LEDs/m",
+        width: "10mm"
+      },
+      applications: ["Digital Signage", "Display Backlighting", "Cove Lighting", "Feature Walls"],
+      color: "from-neon-blue to-neon-cyan",
+      itemCode: "moon-2835RGB-10"
     },
     {
       id: 3,
-      name: "5050RGB-2/80D-36V-12mm",
-      image: cmML3,
-      category: "RGB Strip",
-      itemCode: "moon-5050RGB-12",
-      length: "5M",
-      watts: "7.2W/M",
-      volts: "36V",
-      ipRating: "IP44"
+      name: "Ultra-Bright RGB Strip",
+      image: cmML6,
+      description: "High-intensity RGB LED strip delivering exceptional brightness and color performance for demanding commercial environments.",
+      features: ["Maximum Brightness", "Superior Heat Management", "Waterproof Design", "Color Consistency", "Professional Grade"],
+      specifications: {
+        chipType: "2835RGB",
+        powerConsumption: "19.2W/M",
+        voltage: "24V DC",
+        ipRating: "IP68",
+        density: "96 LEDs/m",
+        width: "8mm"
+      },
+      applications: ["Outdoor Facades", "Stadium Lighting", "Large Displays", "Industrial Applications"],
+      color: "from-neon-green to-neon-blue",
+      itemCode: "moon-2835RGB-8"
     },
     {
       id: 4,
-      name: "2835RGB-2/120D-24V-10mm",
-      image: cmML4,
-      category: "RGB Strip",
-      itemCode: "moon-2835RGB-10",
-      length: "5M",
-      watts: "9.6W/M",
-      volts: "24V",
-      ipRating: "IP67"
-    },
-    {
-      id: 5,
-      name: "5050RGB-2/60D-24V-12mm",
-      image: cmML5,
-      category: "RGB Strip",
-      itemCode: "moon-5050RGB-24",
-      length: "5M",
-      watts: "14.4W/M",
-      volts: "24V",
-      ipRating: "IP65"
-    },
-    {
-      id: 6,
-      name: "2835RGB-8/96D-24V-8mm",
-      image: cmML6,
-      category: "RGB Strip",
-      itemCode: "moon-2835RGB-8",
-      length: "5M",
-      watts: "19.2W/M",
-      volts: "24V",
-      ipRating: "IP68"
-    },
-    {
-      id: 7,
-      name: "2835W-4/120D-24V-10mm",
+      name: "Commercial White Strip",
       image: cmML7,
-      category: "White Strip",
-      itemCode: "moon-2835W-10",
-      length: "5M",
-      watts: "9.6W/M",
-      volts: "24V",
-      ipRating: "IP65"
-    },
-    {
-      id: 8,
-      name: "2835W-6/120D-24V-10mm",
-      image: cmML8,
-      category: "White Strip",
-      itemCode: "moon-2835W-6",
-      length: "5M",
-      watts: "14.4W/M",
-      volts: "24V",
-      ipRating: "IP67"
+      description: "High-efficiency pure white LED strip optimized for general commercial lighting with excellent color rendering.",
+      features: ["Pure White Light", "High CRI >90", "Energy Efficient", "Consistent Output", "Long Life Rating"],
+      specifications: {
+        chipType: "2835W",
+        powerConsumption: "9.6W/M",
+        voltage: "24V DC",
+        ipRating: "IP65",
+        density: "120 LEDs/m",
+        width: "10mm"
+      },
+      applications: ["Office Lighting", "Retail Spaces", "Task Lighting", "General Illumination"],
+      color: "from-neon-cyan to-neon-purple",
+      itemCode: "moon-2835W-10"
     }
   ]
 
@@ -138,7 +118,7 @@ export default function CommercialLights() {
               </div>
               
               <h1 className="text-5xl md:text-7xl font-bold mb-6 leading-tight">
-                <span className="bg-clip-text  animate-glow">Commercial</span> LED Systems
+                <span className="bg-clip-text bg-gradient-to-r from-neon-blue to-neon-cyan animate-glow">Commercial</span> LED Systems
               </h1>
               
               <p className="text-xl md:text-2xl text-gray-300 mb-8 max-w-3xl mx-auto">
@@ -171,37 +151,93 @@ export default function CommercialLights() {
                 Product <span className="bg-clip-text text-transparent bg-gradient-to-r from-neon-pink to-neon-purple">Showcase</span>
               </h2>
               <p className="text-lg text-gray-400 max-w-3xl mx-auto">
-                Explore our comprehensive range of commercial LED strip lights designed for professional applications
+                Explore our professional-grade commercial LED lighting solutions designed for demanding business environments
               </p>
             </div>
 
-            {/* Products Grid */}
-            <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6 mb-16">
-              {commercialProducts.map((product) => (                  <div key={product.id} className="group cursor-pointer">
-                  <div className="bg-dark-700 rounded-xl overflow-hidden border border-gray-700 hover:border-neon-blue/50 transition-all duration-500 hover:shadow-xl hover:shadow-neon-blue/20 hover:scale-105">
-                    {/* Product Image */}
-                    <div className="aspect-square bg-gradient-to-br from-neon-blue to-neon-cyan p-0.5">
-                      <div className="w-full h-full bg-dark-800 rounded-t-lg overflow-hidden">
+            <div className="grid gap-12">
+              {commercialProducts.map((product, index) => (
+                <div key={product.id} className={`grid lg:grid-cols-2 gap-12 items-center ${index % 2 === 1 ? 'lg:grid-flow-col-dense' : ''}`}>
+                  {/* Product Image */}
+                  <div className={`${index % 2 === 1 ? 'lg:col-start-2' : ''}`}>
+                    <div className={`aspect-video bg-gradient-to-br ${product.color} p-0.5 rounded-xl`}>
+                      <div className="w-full h-full bg-dark-700 rounded-xl overflow-hidden flex items-center justify-center p-4">
                         <img 
                           src={product.image} 
                           alt={product.name}
-                          className="w-full h-full object-cover transition-transform duration-300 group-hover:scale-110"
+                          className="max-w-full max-h-full object-contain rounded-lg"
                         />
                       </div>
                     </div>
-                    
-                    {/* Product Info */}
-                    <div className="p-4">
-                      <h3 className="text-sm font-semibold mb-2 text-white group-hover:text-neon-blue transition-colors truncate">
-                        {product.name}
-                      </h3>
-                      <span className="inline-block px-2 py-1  text-white text-xs rounded-full font-medium mb-2">
-                        {product.category}
-                      </span>
-                      <div className="text-xs text-gray-400 space-y-1">
-                        <div>Code: {product.itemCode}</div>
-                        <div>{product.watts} • {product.volts}</div>
+                  </div>
+
+                  {/* Product Info */}
+                  <div className={`${index % 2 === 1 ? 'lg:col-start-1' : ''}`}>
+                    <h3 className="text-3xl font-bold mb-4 text-white">{product.name}</h3>
+                    <p className="text-gray-400 mb-6 text-lg">{product.description}</p>
+
+                    {/* Features */}
+                    <div className="mb-6">
+                      <h4 className="text-xl font-semibold mb-3 text-white">Key Features</h4>
+                      <div className="grid grid-cols-2 gap-2">
+                        {product.features.map((feature, idx) => (
+                          <div key={idx} className="flex items-center space-x-2">
+                            <div className="w-2 h-2 bg-neon-green rounded-full"></div>
+                            <span className="text-gray-300 text-sm">{feature}</span>
+                          </div>
+                        ))}
                       </div>
+                    </div>
+
+                    {/* Specifications */}
+                    <div className="mb-6">
+                      <h4 className="text-xl font-semibold mb-3 text-white">Specifications</h4>
+                      <div className="p-4 space-y-2">
+                        <div className="flex justify-between">
+                          <span className="text-gray-400">Chip Type:</span>
+                          <span className="text-white">{product.specifications.chipType}</span>
+                        </div>
+                        <div className="flex justify-between">
+                          <span className="text-gray-400">Power Consumption:</span>
+                          <span className="text-white">{product.specifications.powerConsumption}</span>
+                        </div>
+                        <div className="flex justify-between">
+                          <span className="text-gray-400">Voltage:</span>
+                          <span className="text-white">{product.specifications.voltage}</span>
+                        </div>
+                        <div className="flex justify-between">
+                          <span className="text-gray-400">IP Rating:</span>
+                          <span className="text-white">{product.specifications.ipRating}</span>
+                        </div>
+                        <div className="flex justify-between">
+                          <span className="text-gray-400">LED Density:</span>
+                          <span className="text-white">{product.specifications.density}</span>
+                        </div>
+                        <div className="flex justify-between">
+                          <span className="text-gray-400">Width:</span>
+                          <span className="text-white">{product.specifications.width}</span>
+                        </div>
+                      </div>
+                    </div>
+
+                    {/* Applications */}
+                    <div className="mb-6">
+                      <h4 className="text-xl font-semibold mb-3 text-white">Perfect For</h4>
+                      <div className="flex flex-wrap gap-2">
+                        {product.applications.map((app, idx) => (
+                          <span key={idx} className={`px-3 py-1 ${product.color} text-white text-sm`}>
+                            {app}
+                          </span>
+                        ))}
+                      </div>
+                    </div>
+
+                    {/* Item Code */}
+                    <div className="mb-6">
+                      <h4 className="text-xl font-semibold mb-3 text-white">Item Code</h4>
+                      <span className="inline-block px-4 py-2 bg-dark-600 text-neon-blue font-mono text-sm rounded-lg border border-neon-blue/30">
+                        {product.itemCode}
+                      </span>
                     </div>
                   </div>
                 </div>
@@ -211,11 +247,11 @@ export default function CommercialLights() {
         </section>
 
         {/* Technical Specifications Table */}
-        <section className="py-20 bg-dark-900">
+        <section className="py-20 bg-dark-800">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="text-center mb-16">
               <h2 className="text-4xl md:text-5xl font-bold mb-6">
-                Technical <span className="bg-clip-text ">Specifications</span>
+                Technical <span className="bg-clip-text text-transparent bg-gradient-to-r from-neon-pink to-neon-purple">Specifications</span>
               </h2>
               <p className="text-lg text-gray-400 max-w-3xl mx-auto">
                 Detailed specifications for our commercial LED lighting solutions
@@ -225,15 +261,15 @@ export default function CommercialLights() {
             {/* Creative Table Design */}
             <div className="bg-gradient-to-br from-dark-800 to-dark-700 rounded-2xl border border-neon-blue/20 overflow-hidden">
               {/* Table Header */}
-              <div className=" p-1">
+              <div className="bg-gradient-to-r from-neon-blue to-neon-cyan p-1">
                 <div className="bg-dark-800 rounded-t-xl">
                   <div className="grid grid-cols-6 gap-4 p-6 text-white font-bold">
                     <div className="text-center">ITEM CODE</div>
-                    <div className="text-center">LENGTH</div>
-                    <div className="text-center">WATTS</div>
-                    <div className="text-center">VOLTS</div>
+                    <div className="text-center">CHIP TYPE</div>
+                    <div className="text-center">POWER</div>
+                    <div className="text-center">VOLTAGE</div>
                     <div className="text-center">IP RATING</div>
-                    <div className="text-center">CATEGORY</div>
+                    <div className="text-center">WIDTH</div>
                   </div>
                 </div>
               </div>
@@ -246,36 +282,35 @@ export default function CommercialLights() {
                       {product.itemCode}
                     </div>
                     <div className="text-center text-gray-300 text-sm">
-                      {product.length}
+                      {product.specifications.chipType}
                     </div>
                     <div className="text-center text-gray-300 text-sm">
-                      {product.watts}
+                      {product.specifications.powerConsumption}
                     </div>
                     <div className="text-center text-gray-300 text-sm">
-                      {product.volts}
+                      {product.specifications.voltage}
                     </div>
                     <div className="text-center">
                       <span className={`inline-block px-2 py-1 rounded-full text-xs font-medium ${
-                        product.ipRating === 'IP68' ? 'text-neon-green' :
-                        product.ipRating === 'IP67' ? 'text-neon-blue' :
-                        product.ipRating === 'IP65' ? 'text-neon-cyan' :
+                        product.specifications.ipRating === 'IP68' ? 'text-neon-green' :
+                        product.specifications.ipRating === 'IP67' ? 'text-neon-blue' :
+                        product.specifications.ipRating === 'IP65' ? 'text-neon-cyan' :
                         'text-neon-purple'
                       }`}>
-                        {product.ipRating}
+                        {product.specifications.ipRating}
                       </span>
                     </div>
                     <div className="text-center text-gray-300 text-sm">
-                      {product.category}
+                      {product.specifications.width}
                     </div>
                   </div>
                 ))}
               </div>
             </div>
 
-            {/* Features Section */}
             <div className="mt-16 grid md:grid-cols-3 gap-8">
               <div className="text-center p-8 bg-dark-700 rounded-xl border border-neon-blue/20 hover:border-neon-blue/50 transition-all duration-300">
-                <div className="w-16 h-16  rounded-full flex items-center justify-center mx-auto mb-6">
+                <div className="w-16 h-16 bg-gradient-to-r from-neon-blue to-neon-cyan rounded-full flex items-center justify-center mx-auto mb-6">
                   <span className="text-white text-2xl">⚡</span>
                 </div>
                 <h3 className="text-xl font-semibold text-white mb-4">High Efficiency</h3>
@@ -290,12 +325,12 @@ export default function CommercialLights() {
                 </div>
                 <h3 className="text-xl font-semibold text-white mb-4">Weather Protection</h3>
                 <p className="text-gray-400">
-                  IP44 to IP68 rated enclosures ensuring reliable operation in any environment
+                  IP65 to IP68 rated enclosures ensuring reliable operation in any environment
                 </p>
               </div>
 
               <div className="text-center p-8 bg-dark-700 rounded-xl border border-neon-blue/20 hover:border-neon-blue/50 transition-all duration-300">
-                <div className="w-16 h-16  rounded-full flex items-center justify-center mx-auto mb-6">
+                <div className="w-16 h-16 bg-gradient-to-r from-neon-blue to-neon-cyan rounded-full flex items-center justify-center mx-auto mb-6">
                   <span className="text-white text-2xl">🔧</span>
                 </div>
                 <h3 className="text-xl font-semibold text-white mb-4">Easy Installation</h3>
@@ -307,8 +342,8 @@ export default function CommercialLights() {
 
             {/* CTA Section */}
             <div className="mt-16 text-center">
-              <div className="bg-gradient-to-r from-dark-800 to-dark-700 rounded-2xl p-8 border border-neon-blue/20">
-                <h3 className="text-3xl font-bold mb-4 bg-clip-text ">
+              <div className="bg-gradient-to-r from-dark-800 to-dark-700 rounded-2xl p-8 border border-neon-pink/20">
+                <h3 className="text-3xl font-bold mb-4 bg-clip-text text-transparent bg-gradient-to-r from-neon-pink to-neon-purple">
                   Ready to Illuminate Your Commercial Space?
                 </h3>
                 <p className="text-gray-400 mb-8 max-w-2xl mx-auto">
