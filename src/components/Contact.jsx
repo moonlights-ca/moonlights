@@ -175,15 +175,6 @@ export default function Contact() {
                       <div className="absolute top-32 right-8 w-2 h-2 bg-neon-purple rounded-full animate-pulse" style={{animationDelay: '1.1s'}}></div>
                     </>
                   )}
-                  
-                  {/* Activity indicator */}
-                  {inputActivity > 0 && (
-                    <div className="absolute top-4 right-4">
-                      <div className="text-xs text-neon-pink opacity-60">
-                        {inputActivity > 5 ? '🔥' : inputActivity > 3 ? '✨' : '💫'}
-                      </div>
-                    </div>
-                  )}
                 </div>
               </div>
             </div>
